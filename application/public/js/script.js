@@ -1,46 +1,7 @@
-// if (!username[0].match(/[a-z]/i))
-// {
-// alert('The first letter of the Username must be a letter!');
-// return false;
-// }
 
-// if (!username.match(/^[a-z0-9]+$/i))
-// {
-// alert('The Username must not have anything other than Alphanumeric characters!');
-// return false;
-// }
-
-
-// if (username.length < 3)
-// {
-// alert('The name of the Username must be 3 or more than 3!');
-// return false;
-// }
-
-// function passwordComplexity(pas)
-// {
-// var theRegexForUs = /^(?=.*\d)(?=.*[/*-+!@#$^&*])(?=.*[A-Z]).{8,}$/;
-// return theRegexForUs.test(pas);
-// }
-
-// var pas = document.getElementById('pass').value;
-// var pasTwo = document.getElementById('repass').value;
-// if (!passwordMatch(pas, pasTwo))
-// {
-// alert('The two passwords not matching');
-// return false;
-// }
-
-
-
-// function passwordMatch(pas, pasTwo) {
-// if (pas != pasTwo)
-// {
-// return false;
-// }
-// }
 
 function validateForm() {
+    console.log(" dsxnjjsn")
     var username = document.getElementsByName('username')[0].value;
     var email = document.getElementsByName('E-mail')[0].value;
     var password = document.getElementsByName('password')[0].value;
