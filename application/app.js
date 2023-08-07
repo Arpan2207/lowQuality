@@ -1,11 +1,13 @@
 const createError = require("http-errors");
 const express = require("express");
-const favicon = require('serve-favicon');
+const favicon = require('serve-favicon'); 
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const handlebars = require("express-handlebars");
 const indexRouter = require("./routes/index");
+//var loginRouter = require('./routes/login');
+//var postvideoRouter = require('./routes/postvideo');
 const usersRouter = require("./routes/users");
 
 const app = express();
@@ -35,6 +37,8 @@ app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use("/public", express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter); // route middleware from ./routes/index.js
+//app.use('/', loginRouter);
+//app.use('/', postvideoRouter);
 app.use("/users", usersRouter); // route middleware from ./routes/users.js
 
 
