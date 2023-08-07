@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="../public/css/postvideo.css">
+</head>
+<body>
+
+    <header>
+        <h1>CSC 317 Website</h1>
+        <h2>Post your video</h2>
+    </header>
+
+    <main>
+        <p>Post videos if you already have an account.</p>
+        <pre><label><big>Post Title : </big>        </label><textarea placeholder="Title" id="Title" cols="50" rows="2"></textarea></pre>    
+        <pre><label><big>Post Description : </big> </label><textarea placeholder="Description" id="Description" cols="50" rows="4"></textarea></pre>
+        
+        <pre><label><big>Input a Video : </big>              </label><input type="file" name="video" required size="53"></pre>
+            <br>
+
+        <p1>Accept Acceptable Use <a href="{{policyUrl}}">Policy</a> for uploading videos.<input type="checkbox"/>
+            <button type="submit">Submit</button>
+            </p1>
+            <br>
+            <br>
+            <br>
+            <pre> 
+                <button class="button"><a href="{{homeUrl}}">Home</a></button>
+                <button class="button"><a href="{{loginUrl}}">Login</a></button>
+                <button class="button"><a href="{{registerUrl}}">Register</a></button>
+                <button class="button"><a href="{{viewpostUrl}}">Viewpost</a></button>
+            </pre>
+    </main>
+    <br>
+    <br>
+    <br>
+
+    <footer>
+        <h4>{{footerText}}</h4>
+    </footer>
+    
+</body>
+</html>
