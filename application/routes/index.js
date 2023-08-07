@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.locals.title = "CSC 317 app"
   res.locals.name = "Arpan R Savani" 
-  res.render("index");
+  res.render("index",{title:"Home", css: ["index.css"], js: ["index.js"]});
 });
 
 
