@@ -1,3 +1,4 @@
+require('dotenv').config()
 const createError = require("http-errors");
 const express = require("express");
 const favicon = require('serve-favicon'); 
@@ -6,8 +7,6 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const handlebars = require("express-handlebars");
 const indexRouter = require("./routes/index");
-//var loginRouter = require('./routes/login');
-//var postvideoRouter = require('./routes/postvideo');
 const usersRouter = require("./routes/users");
 
 const app = express();
