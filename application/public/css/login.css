@@ -45,7 +45,7 @@ section {
     outline: none;
     border-color: #555;
   }
-    
+    /* login button */
 button[type="submit"] {
     background-color: #c2fbd7;
     border-radius: 50px;
