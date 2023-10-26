@@ -1,9 +1,15 @@
 
-<body>
-    <main>
-        
-    <pre> <button class="button"><a href="/">Home</a></button>       <button class="button"><a href="/postvideo">postvideo</a></button>      <button class="button"><a href="/login">Login</a></button>
-    </pre>
 
-    </main>
-</body>
+<div class="navbar">
+    <ul class="navbar-list">
+        <li class="navbar-item"><a href="/">Home</a></li>
+        <li class="navbar-item"><a href="/postvideo">postvideo</a></li>
+        <!-- Add more navbar items as needed -->
+        {{#if isLoggedIn}} 
+        <li class="navbar-item">{{>userdropdown}}</li> 
+        {{else}}
+        <li class="navbar-item"><a href="/login">Login</a></li>
+    {{/if}}
+        <div class="navbar-marker"></div>
+    </ul>
+</div>

@@ -54,6 +54,10 @@ app.use(session({
 
 app.use(function(req,res,next){
   console.log(req.session);
+  if(req.session.user){
+    res.locals.isLoggedIn = true;
+    res.locals.user = req.session.user;
+  }
   next();
 })
 

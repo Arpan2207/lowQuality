@@ -41,7 +41,7 @@ router.post('/register', async function(req, res, next) {
     } 
 });
 
-router.post('/login', async function (req,res, next) {
+router.post('/login', async function (req, res, next) {
   var { username, password } = req.body;
   try {
     var [results, _] = await db.execute(
@@ -58,17 +58,22 @@ router.post('/login', async function (req,res, next) {
       req.session.user = {
           userId: user.id,
           username: user.username,
-          email: user.email
+          email: user.email,
       }
-      return res.redirect("/");
+      return res.redirect('/');
     } else {
-      return res.redirect("/login");
+      return res.redirect('/login');
     }
   } catch (err) {
     next(err);
   }
 });
 
-
+router.post('/logout', function (req, res, next) {
+    req.session.destroy(function (err) {
+        if (err) next(err);
+        return res.redirect("/");
+    });
+});
 
 module.exports = router;
